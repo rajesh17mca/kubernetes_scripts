@@ -140,7 +140,13 @@ ExecStart=/usr/local/bin/kube-apiserver \\
   --service-cluster-ip-range=${SERVICE_CLUSTER_CIDR} \\
   --tls-cert-file=${CERT_KUBEAPI_CRT} \\
   --tls-private-key-file=${CERT_KUBEAPI_KEY} \\
-  --client-ca-file=${CA_CRT}
+  --client-ca-file=${CA_CRT} \\
+  --encryption-provider-config=/var/lib/kubernetes/encryption-at-rest.yaml \\
+  --audit-policy-file=/var/lib/kubernetes/logging.yaml \\
+  --audit-log-path=/var/log/api-audit.log \\
+  --audit-log-maxage=30 \\
+  --audit-log-maxbackup=10 \\
+  --audit-log-maxsize=100 
 
 Restart=on-failure
 RestartSec=5
