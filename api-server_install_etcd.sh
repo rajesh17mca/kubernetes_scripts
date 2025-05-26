@@ -139,7 +139,8 @@ ExecStart=/usr/local/bin/kube-apiserver \\
   --service-account-issuer=https://127.0.0.1:6443 \\
   --service-cluster-ip-range=${SERVICE_CLUSTER_CIDR} \\
   --tls-cert-file=${CERT_KUBEAPI_CRT} \\
-  --tls-private-key-file=${CERT_KUBEAPI_KEY}
+  --tls-private-key-file=${CERT_KUBEAPI_KEY} \\
+  --client-ca-file=${CA_CRT}
 
 Restart=on-failure
 RestartSec=5
