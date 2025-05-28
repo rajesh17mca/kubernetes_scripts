@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: example-pod
+  name: example-pod
+spec:
+  containers:
+  - image: nginx
+    name: example-pod
+    limits:
+      cpu: "250m"
+      memory: "250Mi"
+    resources:
+      cpu: "150m"
+      memory: "50Mi"

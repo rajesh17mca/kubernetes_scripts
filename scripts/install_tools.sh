@@ -8,6 +8,8 @@ apt-get update
 echo "Installing tcpdump and net-tools..."
 apt-get -y install tcpdump net-tools
 apt-get install -y curl
+apt-get install -y kubectx
+apt-get install -y kubens
 
 # Confirm installation
 echo "Installation completed. Verifying versions:"

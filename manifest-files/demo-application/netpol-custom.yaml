@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+Kind: NetworkPolicy
+Metadata:
+  name: demo-net-pol-1
+spec:
+  podSelector: 
+    matchLabels:
+      env: production
+  ingress:
+    - from:
+      - podSelector:
+          matchLabels:
+            env: prod
+  policyTypes:
+  - Ingress
+  - Egress
+    
