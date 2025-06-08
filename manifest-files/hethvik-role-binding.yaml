@@ -1,0 +1,17 @@
+# This manifest file is generated with the following CLI Command 
+# kubectl create rolebinding hethvik-rolebinding --role hethvik-role --user=system:serviceaccount:hethvik:hethvik-sa --dry-run=client -o yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: hethvik-rolebinding
+  namespace: hethvik
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: hethvik-role
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: system:serviceaccount:hethvik:hethvik-sa
+
+

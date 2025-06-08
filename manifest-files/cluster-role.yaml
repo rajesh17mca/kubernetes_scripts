@@ -1,0 +1,15 @@
+# This manifest file is generated with the following CLI Command 
+# kubectl create clusterrole hethvik-cluster-role --verb=list,watch,get --resource=pods --dry-run=client -o yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: hethvik-cluster-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - list
+  - watch
+  - get

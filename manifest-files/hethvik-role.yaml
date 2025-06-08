@@ -1,0 +1,16 @@
+# This manifest file is generated with the following CLI Command 
+# kubectl create role hethvik-role --verb=list,watch,get --resource=pods --dry-run=client -o yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: hethvik-role
+  namespace: hethvik
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - list
+  - watch
+  - get

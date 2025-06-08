@@ -1,0 +1,6 @@
+# This manifest file is generated with the following CLI Command 
+# kubectl create ns hethvik --dry-run=client -o yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hethvik
